@@ -1,0 +1,35 @@
+{
+  "name": "daptcha",
+  "version": "0.0.0-beta.1",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "prepare": "yarn clean && yarn format && yarn build",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "ds:build": "rollup -c",
+    "ds:release": "yarn ds:build && np",
+    "clean": "rm -rf ./dist"
+  },
+  "dependencies": {
+    "next": "^12.1.4",
+    "np": "^7.6.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.23",
+    "@types/react": "^17.0.43",
+    "rollup": "^2.70.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.31.2",
+    "typescript": "^4.6.3"
+  },
+  "repository": "https://github.com/codewithcorgis/daptcha.git"
+}
